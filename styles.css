@@ -5598,3 +5598,9 @@ label.panel-block {
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
+
+#nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0; }
