@@ -2,13 +2,12 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>      
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Google fonts--> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" type="text/css" href="./styles.css"/>
-        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     </head>
 
     <body>   
@@ -177,5 +176,26 @@
                 </div>
             </div>
         </section>
+
+
+        <!--Handlebars template-->
+        <script id="template-row" type="text/x-handlebars-template">
+            <table>
+              <thead>
+                <th>Username</th>
+                <th>Real Name</th>
+                <th>Email</th>
+              </thead>
+              <tbody>
+                {{#users}}
+                  <tr>
+                    <td>{{username}}</td>
+                    <td>{{firstName}} {{lastName}}</td>
+                    <td>{{email}}</td>
+                  </tr>
+                {{/users}}
+              </tbody>
+            </table>
+          </script>
     </body>
 </html>
