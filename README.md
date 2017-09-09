@@ -10,4 +10,4 @@ The purpose of this app is to improve adolescent vaccine adherence, as 65 percen
 - [x] User-friendly Q&A section to dispell misconceptions
 - [x] Location services to guide users to vaccine clinics
 - [x] Add & manage multiple profiles
-- [x] Practical notification system through SMS and e-mail to promote vaccine adherence
+- [x] Practical notification system through SMS and e-mail to promote vaccine adherence.
