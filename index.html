@@ -264,22 +264,70 @@
 
         <!--Handlebars template-->
         <script id="template-row" type="text/x-handlebars-template">
-            <table>
-              <thead>
-                <th>Username</th>
-                <th>Real Name</th>
-                <th>Email</th>
-              </thead>
-              <tbody>
-                {{#users}}
-                  <tr>
-                    <td>{{username}}</td>
-                    <td>{{firstName}} {{lastName}}</td>
-                    <td>{{email}}</td>
-                  </tr>
-                {{/users}}
-              </tbody>
-            </table>
-          </script>
+            {{#post}}
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                        <img src="assets/reddit_arrows.jpeg" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                        <p>
+                            <strong>Harry Arnold</strong> <small>@hairyarnold</small> <small>31m</small>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                        </p>
+                        </div>
+                        <nav class="level is-mobile">
+                        <div class="level-left">
+                            <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                            </a>
+                            <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                            </a>
+                            <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                            </a>
+                        </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            {{/post}}
+        </script>
+
+        <!--jQuery-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!--Handlebars-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+        <script>
+          var source = $("#template-row").html();
+          var template = Handlebars.compile(source);  
+          var data = { 
+              vaccinations: [
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  }
+              ]
+          };
+          $("#vaccination-rows").html(template(data));
+        </script>
     </body>
 </html>
