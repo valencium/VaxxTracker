@@ -18,52 +18,51 @@
         <section class="section">
             
           <div class="columns is-multiline">
-              <div class="column is-1">
+              <div class="column is-2">
 
               </div>
-              <div class="column is-10">
+              <div class="column is-8">
               <table class="table">
                   <thead>
                     <tr>
                       <th>Vaccination</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
-                      <th class="has-text-centered">09/09</th>
+                      <th class="has-text-centered">Jan</th>
+                      <th class="has-text-centered">Feb</th>
+                      <th class="has-text-centered">Mar</th>
+                      <th class="has-text-centered">Apr</th>
+                      <th class="has-text-centered">May</th>
+                      <th class="has-text-centered">June</th>
+                      <th class="has-text-centered">July</th>
+                      <th class="has-text-centered">Aug</th>
+                      <th class="has-text-centered">Sept</th>
+                      <th class="has-text-centered">Oct</th>
+                      <th class="has-text-centered">Nov</th>
+                      <th class="has-text-centered">Dec</th>
                     </tr>
                   </thead>
-                  <tbody>
-                      <div id="vaccination-rows">
-
-                      </div>
+                  <tbody id="vaccination-rows">
                   </tbody>
                   <tfoot>
                       <tr>
-                        <th>Vaccination</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                        <th class="has-text-centered">09/09</th>
-                      </tr>
+                          <th>Vaccination</th>
+                          <th class="has-text-centered">Jan</th>
+                          <th class="has-text-centered">Feb</th>
+                          <th class="has-text-centered">Mar</th>
+                          <th class="has-text-centered">Apr</th>
+                          <th class="has-text-centered">May</th>
+                          <th class="has-text-centered">June</th>
+                          <th class="has-text-centered">July</th>
+                          <th class="has-text-centered">Aug</th>
+                          <th class="has-text-centered">Sept</th>
+                          <th class="has-text-centered">Oct</th>
+                          <th class="has-text-centered">Nov</th>
+                          <th class="has-text-centered">Dec</th>
+                        </tr>
                   </tfoot>
               </table>
               <a class="button is-fullwidth is-primary" href="index.html">Go Back Home</a>
               </div>
-              <div class="column is-1">
+              <div class="column is-2">
                       
               </div>
           </div>
@@ -76,7 +75,7 @@
           <tr>
             <td><a href="#">{{name}}</a></td>
             {{#each occurrence}}
-            <td class="has-text-centered">{{occurrence}}</td>
+            <td class="has-text-centered">{{this}}</td>
             {{/each}}
           </tr>
           {{/vaccinations}}  
@@ -85,8 +84,34 @@
         <!--jQuery-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!--Handlebars-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>        
-        <!--Inflating rows-->
-        <script type="text/javascript" src="js/account_info.js" /> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script> 
+
+        <script>
+          console.log("the javascript is loading");
+          var source = $("#template-row").html();
+          var template = Handlebars.compile(source);  
+          var data = { 
+              vaccinations: [
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  },
+                  {
+                      name: "FLU234",
+                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                  }
+              ]
+          };
+          $("#vaccination-rows").html(template(data));
+        </script>
+    
     </body>
 </html>
