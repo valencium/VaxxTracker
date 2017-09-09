@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Google fonts--> 
+        <!--Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" type="text/css" href="./styles.css"/>
     </head>
@@ -16,7 +16,7 @@
             </div>
         </div>
         <section class="section">
-            
+
           <div class="columns is-multiline">
               <div class="column is-2">
 
@@ -63,7 +63,7 @@
               <a class="button is-fullwidth is-primary" href="index.html">Go Back Home</a>
               </div>
               <div class="column is-2">
-                      
+
               </div>
           </div>
 
@@ -78,35 +78,51 @@
             <td class="has-text-centered">{{this}}</td>
             {{/each}}
           </tr>
-          {{/vaccinations}}  
+          {{/vaccinations}}
         </script>
 
         <!--jQuery-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!--Handlebars-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
         <script>
           console.log("the javascript is loading");
           var source = $("#template-row").html();
-          var template = Handlebars.compile(source);  
-          var data = { 
+          var template = Handlebars.compile(source);
+          var data = {
               vaccinations: [
                   {
-                      name: "FLU234",
-                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      name: "Chicken Pox",
+                      occurrence:["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
                   },
                   {
-                      name: "FLU234",
-                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      name: "Influenza",
+                      occurrence:["0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0"]
                   },
                   {
-                      name: "FLU234",
-                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      name: "Diptheria, Tetanus, Pertussis",
+                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"]
                   },
                   {
-                      name: "FLU234",
-                      occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      name: "Hib",
+                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"]
+                  },
+                  {
+                      name: "Measles, Mumps, Rubella",
+                      occurrence:["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
+                  },
+                  {
+                      name: "HepB",
+                      occurrence:["1", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"]
+                  },
+                  {
+                      name: "Polio",
+                      occurrence:["0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0"]
+                  },
+                  {
+                      name: "Pneumococcal",
+                      occurrence:["0", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"]
                   }
               ]
           };
@@ -115,6 +131,6 @@
           //Show green squares for vaccines taken and grey squares for the next 5
           
         </script>
-    
+
     </body>
 </html>
