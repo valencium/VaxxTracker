@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "test": "echo 'testing npm run to see if it's working and, if u see this, it's working'",
+        "start": "http-server -a localhost -p 8000"
+    }
+}
+  
