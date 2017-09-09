@@ -1,1 +1,17 @@
-@import "./node_modules/materialize-css/sass/materialize.scss";
+@import "./sass/bulma/sass/utilities/initial-variables";
+$blue: #446CB3;
+$red: #D24D57;
+$dark: #363636;
+$primary: $blue;
+/*Font linked in <head> of html pages*/
+$family-primary: "Lato", sans-serif;
+
+@import "./sass/bulma/sass/utilities/_all";
+@import "./sass/bulma/bulma";
+
+#nav{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+}
