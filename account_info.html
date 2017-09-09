@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="hero is-primary">
-            <div class="hero-body container">
+            <div class="hero-body container has-text-centered">
                 <h1 class="title is-1 is-spaced">Hi, Pablo Escobar</h1>
                 <h3 class="subtitle is-3">Here are your upcoming medications.</h3>
             </div>
@@ -73,7 +73,7 @@
         <script id="template-row" type="text/x-handlebars-template">
           {{#vaccinations}}
           <tr>
-            <td><a href="#">{{name}}</a></td>
+            <td><a href="#" class="">{{name}}</a></td>
             {{#each occurrence}}
             <td class="has-text-centered">{{this}}</td>
             {{/each}}
@@ -128,8 +128,9 @@
           };
           $("#vaccination-rows").html(template(data));
 
-          //Show green squares for vaccines taken and grey squares for the next 5
-          
+          function inflate(modalId){    
+            document.getElementById(modalId).className = "is-active";  
+          }
         </script>
 
     </body>

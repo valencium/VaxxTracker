@@ -12,6 +12,12 @@
     </head>
 
     <body>   
+            <div class="hero is-primary">
+                    <div class="hero-body container has-text-centered">
+                        <h1 class="title is-1 is-spaced">Hi, Alfred A.</h1>
+                        <h3 class="subtitle is-3">Here are your kids</h3>
+                    </div>
+                </div>
         <section class="section">
             <div class="columns is-multiline">
                 <div class="column is-12">
@@ -153,6 +159,9 @@
 
                 <!--FORUM/REDDIT-LIKE POST-->
                 <div class="column is-12">
+                    <div id="post-rows">
+                                
+                    </div>
                     <br>
                     <h1 class="title is-1 is-spaced">Recent Posts</h1>
                     <hr>
@@ -262,9 +271,9 @@
         </section>
 
 
-        <!--Handlebars template-->
-        <script id="template-row" type="text/x-handlebars-template">
-            {{#post}}
+        <!--Handlebars template for posts TODO-->
+        <script id="post-row" type="text/x-handlebars-template">
+            {{#posts}}
             <div class="box">
                 <article class="media">
                     <div class="media-left">
@@ -275,9 +284,9 @@
                     <div class="media-content">
                         <div class="content">
                         <p>
-                            <strong>Harry Arnold</strong> <small>@hairyarnold</small> <small>31m</small>
+                            <strong>{{name}}</strong> <small>@hairyarnold</small> <small>31m</small>
                             <br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                            {{occurrence}}
                         </p>
                         </div>
                         <nav class="level is-mobile">
@@ -296,7 +305,7 @@
                     </div>
                 </article>
             </div>
-            {{/post}}
+            {{/posts}}
         </script>
 
         <!--jQuery-->
@@ -305,10 +314,10 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
         <script>
-          var source = $("#template-row").html();
+          var source = $("#post-row").html();
           var template = Handlebars.compile(source);  
           var data = { 
-              vaccinations: [
+              posts: [
                   {
                       name: "FLU234",
                       occurrence:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
@@ -327,7 +336,7 @@
                   }
               ]
           };
-          $("#vaccination-rows").html(template(data));
+          $("#post-rows").html(template(data));
         </script>
     </body>
 </html>

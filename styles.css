@@ -5608,4 +5608,5 @@ label.panel-block {
 .completed {
   background-color: #23d160; }
 
-/*# sourceMappingURL=styles.css.map */
+.hero .container {
+  padding-left: 25%; }
