@@ -72,13 +72,34 @@
         <!--Handlebars-->
         <script id="template-row" type="text/x-handlebars-template">
           {{#vaccinations}}
+          <div id="{{modalId}}" class="modal">
+                <div class="modal-background" onclick="document.getElementById('one').className = 'modal'"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        {{modalContent}}
+                    </div>
+                </div>
+            </div>
           <tr>
-            <td><a href="#" class="">{{name}}</a></td>
+            <td><a href="#" onclick="inflate({{viewId}});">{{name}}</a></td>
             {{#each occurrence}}
             <td class="has-text-centered">{{this}}</td>
             {{/each}}
           </tr>
           {{/vaccinations}}
+          
+        </script>
+        <script>
+            var coin = 0;
+            function inflate(modalId){
+                coin++;
+                console.log("modal was toggled");
+                var x = document.getElementById("one");
+                document.getElementById("one").classList += " is-active";
+                if(coin == 1){
+                    //change content
+                }
+            };   
         </script>
 
         <!--jQuery-->
@@ -87,50 +108,69 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
         <script>
-          console.log("the javascript is loading");
           var source = $("#template-row").html();
           var template = Handlebars.compile(source);
           var data = {
               vaccinations: [
                   {
                       name: "Chicken Pox",
-                      occurrence:["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
+                      occurrence:["1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"],
+                      viewId: 'one',
+                      modalId: 'one',
+                      modalContent: "Protects your child from hepatitis A, a potentially serious disease, protects other people from the disease because children under 6 years old with hepatitis A usually don’t have symptoms, but they often pass the disease to others without anyone knowing they were infected and Keeps your child from missing school or child care (and keeps you from missing work to care for your sick child)."
                   },
                   {
                       name: "Influenza",
-                      occurrence:["0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0"]
+                      occurrence:["0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0"],
+                      viewId: 'two',
+                      modalId: 'two',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "Diptheria, Tetanus, Pertussis",
-                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"]
+                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"],
+                      viewId: 'three',
+                      modalId: 'three',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "Hib",
-                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"]
+                      occurrence:["0", "0", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0"],
+                      viewId: 'four',
+                      modalId: 'four',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "Measles, Mumps, Rubella",
-                      occurrence:["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"]
+                      occurrence:["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1"],
+                      viewId: 'five',
+                      modalId: 'five',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "HepB",
-                      occurrence:["1", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"]
+                      occurrence:["1", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"],
+                      viewId: 'six',
+                      modalId: 'six',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "Polio",
-                      occurrence:["0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0"]
+                      occurrence:["0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0"],
+                      viewId: 'seven',
+                      modalId: 'seven',
+                      modalContent: "paste content here por favor"
                   },
                   {
                       name: "Pneumococcal",
-                      occurrence:["0", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"]
+                      occurrence:["0", "0", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0"],
+                      viewId: 'eight',
+                      modalId: 'eight',
+                      modalContent: "paste content here por favor"
                   }
             ]
           };
           $("#vaccination-rows").html(template(data));
-
-          function inflate(modalId){    
-            document.getElementById(modalId).className = "is-active";  
-          }
         </script>
 
     </body>
