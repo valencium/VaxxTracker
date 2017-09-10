@@ -12,6 +12,36 @@
     </head>
 
     <body>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="index.html">
+				<img src="./assets/banner.png" alt="Bulma: a modern CSS framework based on Flexbox" width="110" height="28">
+				</a>
+			</div>
+			<div class="navbar-start">
+				<a class="navbar-item " href="#users">
+					My Records
+				</a>
+				<a class="navbar-item " href="#faq">
+					FAQ
+				</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link  is-active" href="#">
+						Profile
+					</a>
+					<div class="navbar-dropdown ">
+						<a class="navbar-item " href="#">
+							Account Info
+						</a>
+						<a class="navbar-item " href="settings.html">
+							Settings
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
         <div class="hero is-primary">
             <div class="hero-head">
                 <br>
@@ -27,8 +57,8 @@
 
         <section class="section">
             <div class="columns is-multiline">
-                <div class="column is-12">
-                    <h1 class="title is-1 is-spaced" id="users">Records</h1>
+                <div id="users" class="column is-12">
+                    <h1 class="title is-1 is-spaced">Records</h1>
                     <hr>
                 </div>
                 <div class="column is-3">
@@ -237,7 +267,7 @@
                 </div>
 
                 <!--FAQ (FREQUENTLY ASKED QUESTIONS)-->
-                <div class="column is-12">
+                <div id="faq" class="column is-12">
                     <br>
                     <h1 class="title is-1 is-spaced">Frequently Asked Questions</h1>
                     <hr>
@@ -276,28 +306,6 @@
                     </div>
                 </div>
             </div>
-
-        <div class="column is-12">
-                <br>
-                <h1 class="title is-1 is-spaced">Sign up for our SMS notifications</h1>
-                <div class="field">
-                    <div class="control">
-                        <input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your Phone Number">
-                    </div>
-                </div>
-                <a id="save-btn" class="button is-primary is-fullwidth">Submit</a>
-            </div>
-            <div class="column is-13">
-                    <br>
-                    <h1 class="title is-1 is-spaced">Sign up for our email notifications</h1>
-                    <div class="field">
-                        <div class="control">
-                            <input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your email">
-                        </div>
-                    </div>
-                    <a id="save-btn" class="button is-primary is-fullwidth">Submit</a>
-                </div>
-            <br>
         </section>
 
 
@@ -361,25 +369,6 @@
 				]
 			};
 			$("#post-rows").html(template(data));
-
-			$("#save-btn").click(function(){
-				$.ajax({
-				    type: 'POST',
-				    url: 'http://localhost:5000/alert',
-				    crossDomain: true,
-				    data: JSON.stringify({
-						"client-number": "+1"+document.getElementById("textfield").value,
-						"app-date": "9/12/17"
-					}),
-				    contentType: 'application/json; charset=utf-8',
-				    success: function(responseData, textStatus, jqXHR) {
-				        var value = responseData.someKey;
-				    },
-				    error: function (responseData, textStatus, errorThrown) {
-				        alert('POST failed.');
-				    }
-				});
-			});
 		});
         </script>
     </body>

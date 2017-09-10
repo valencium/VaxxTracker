@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Google fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./styles.css"/>
+	</head>
+	<body>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="index.html">
+				<img src="./assets/banner.png" alt="Bulma: a modern CSS framework based on Flexbox" width="110" height="28">
+				</a>
+			</div>
+			<div class="navbar-start">
+				<a class="navbar-item " href="#users">
+					My Records
+				</a>
+				<a class="navbar-item " href="#faq">
+					FAQ
+				</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link  is-active" href="#">
+						Profile
+					</a>
+					<div class="navbar-dropdown ">
+						<a class="navbar-item " href="#">
+							Account Info
+						</a>
+						<a class="navbar-item " href="settings.html">
+							Settings
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="column is-12">
+			<br>
+			<h1 class="title is-1 is-spaced">Sign up for our SMS notifications</h1>
+			<div class="field">
+				<div class="control">
+					<input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your Phone Number">
+				</div>
+			</div>
+			<a id="save-btn" class="button is-primary is-fullwidth">Submit</a>
+		</div>
+		<div class="column is-13">
+			<br>
+			<h1 class="title is-1 is-spaced">Sign up for our email notifications</h1>
+			<div class="field">
+				<div class="control">
+					<input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your email">
+				</div>
+			</div>
+			<a id="save-btn" class="button is-primary is-fullwidth">Submit</a>
+		</div>
+		<br>
+	</body>
+
+	<!--jQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$("#save-btn").click(function(){
+			$.ajax({
+				type: 'POST',
+				url: 'http://localhost:5000/alert',
+				crossDomain: true,
+				data: JSON.stringify({
+					"client-number": "+1"+document.getElementById("textfield").value,
+					"app-date": "9/12/17"
+				}),
+				contentType: 'application/json; charset=utf-8',
+				success: function(responseData, textStatus, jqXHR) {
+					var value = responseData.someKey;
+				},
+				error: function (responseData, textStatus, errorThrown) {
+					alert('POST failed.');
+				}
+			});
+		});
+	});
+	</script>
+</html>
