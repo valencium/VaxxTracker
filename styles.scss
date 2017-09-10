@@ -9,13 +9,10 @@ $family-primary: "Lato", sans-serif;
 @import "./sass/bulma/sass/utilities/_all";
 @import "./sass/bulma/bulma";
 
-#nav{
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
 .completed{
     background-color: $green;
+}
+
+.container{
+    padding: 0 !important;
 }

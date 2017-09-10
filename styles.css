@@ -5599,14 +5599,10 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
-#nav {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0; }
-
 .completed {
   background-color: #23d160; }
 
-.hero .container {
-  padding-left: 25%; }
+.container {
+  padding: 0 !important; }
+
+/*# sourceMappingURL=styles.css.map */
