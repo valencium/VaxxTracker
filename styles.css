@@ -5605,4 +5605,7 @@ label.panel-block {
 .container {
   padding: 0 !important; }
 
+.hero {
+  background-image: url("assets/bckgrnd.jpg"); }
+
 /*# sourceMappingURL=styles.css.map */
