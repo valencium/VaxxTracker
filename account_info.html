@@ -96,65 +96,65 @@
           var source = $("#template-row").html();
           var template = Handlebars.compile(source);
           var data = {
-              vaccinations: [
-                  {
-                      name: "Chicken Pox",
-                      occurrence:["9/1", "0", "0", "0", "0", "0", "0"],
-                      viewId: 'one',
-                      modalId: 'one',
-                      modalContent: "Protects your child from hepatitis A, a potentially serious disease, protects other people from the disease because children under 6 years old with hepatitis A usually don’t have symptoms, but they often pass the disease to others without anyone knowing they were infected and Keeps your child from missing school or child care (and keeps you from missing work to care for your sick child)."
-                  },
-                  {
-                      name: "Influenza",
-                      occurrence:["0", "0", "0", "0", "0", "1/3", "6/21"],
-                      viewId: 'two',
-                      modalId: 'two',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "Diptheria, Tetanus, Pertussis",
-                      occurrence:["0", "0", "11/2", "0", "0", "0", "9/3"],
-                      viewId: 'three',
-                      modalId: 'three',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "Hib",
-                      occurrence:["0", "0", "2/3", "0", "0", "0", "4/8"],
-                      viewId: 'four',
-                      modalId: 'four',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "Measles, Mumps, Rubella",
-                      occurrence:["0", "0", "0", "0", "0", "0", "0"],
-                      viewId: 'five',
-                      modalId: 'five',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "HepB",
-                      occurrence:["5/7", "0", "1/13", "0", "0", "0", "0"],
-                      viewId: 'six',
-                      modalId: 'six',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "Polio",
-                      occurrence:["0", "0", "4/8", "0", "0", "0", "0"],
-                      viewId: 'seven',
-                      modalId: 'seven',
-                      modalContent: "paste content here por favor"
-                  },
-                  {
-                      name: "Pneumococcal",
-                      occurrence:["0", "0", "8/2", "0", "0", "0", "0"],
-                      viewId: 'eight',
-                      modalId: 'eight',
-                      modalContent: "paste content here por favor"
-                  }
+            vaccinations: [
+            {
+            name: "Chicken Pox",
+            occurrence:["9/1", "-", "-", "-", "-", "-", "-"],
+            viewId: 'one',
+            modalId: 'one',
+            modalContent: "Protects your child from hepatitis A, a potentially serious disease, protects other people from the disease because children under 6 years old with hepatitis A usually don’t have symptoms, but they often pass the disease to others without anyone knowing they were infected and Keeps your child from missing school or child care (and keeps you from missing work to care for your sick child)."
+            },
+            {
+            name: "Influenza",
+            occurrence:["1/3", "6/21", "-", "-", "-", "-", "-"],
+            viewId: 'two',
+            modalId: 'two',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "Diptheria, Tetanus, Pertussis",
+            occurrence:["11/2", "9/3", "-", "-", "-", "-", "-"],
+            viewId: 'three',
+            modalId: 'three',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "Hib",
+            occurrence:["2/3", "4/8", "-", "-", "-", "-", "-"],
+            viewId: 'four',
+            modalId: 'four',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "Measles, Mumps, Rubella",
+            occurrence:["3/24", "-", "-", "-", "-", "-", "-"],
+            viewId: 'five',
+            modalId: 'five',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "HepB",
+            occurrence:["1/12", "5/1", "-", "-", "-", "-", "-"],
+            viewId: 'six',
+            modalId: 'six',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "Polio",
+            occurrence:["4/8", "-", "-", "-", "-", "-", "-"],
+            viewId: 'seven',
+            modalId: 'seven',
+            modalContent: "paste content here por favor"
+            },
+            {
+            name: "Pneumococcal",
+            occurrence:["8/2", "-", "-", "-", "-", "-", "-"],
+            viewId: 'eight',
+            modalId: 'eight',
+            modalContent: "paste content here por favor"
+            }
             ]
-          };
+            };
           $("#vaccination-rows").html(template(data));
         </script>
 
