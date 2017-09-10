@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="./styles.css"/>
     </head>
 
-    <body>   
+    <body>
             <div class="hero is-primary">
                 <div class="hero-body container has-text-centered">
                     <h1 class="title is-1 is-spaced">Hi, Alfred A.</h1>
@@ -37,13 +37,13 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">age</p>
-                                <p class="title">6 months</p>
+                                <p class="title">1</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">date of birth</p>
-                                <p class="title">3/9/2017</p>
+                                <p class="title">3/9</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
@@ -70,13 +70,13 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">age</p>
-                                <p class="title">1 year</p>
+                                <p class="title">2</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">date of birth</p>
-                                <p class="title">8/14/2016</p>
+                                <p class="title">8/14</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
@@ -103,13 +103,13 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">age</p>
-                                <p class="title">1 year</p>
+                                <p class="title">1</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">date of birth</p>
-                                <p class="title">7/29/2016</p>
+                                <p class="title">7/29</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
@@ -136,13 +136,13 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">age</p>
-                                <p class="title">1 year 6 months</p>
+                                <p class="title">2</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                 <p class="heading">date of birth</p>
-                                <p class="title">3/4/2016</p>
+                                <p class="title">3/4</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
@@ -163,7 +163,7 @@
                     <h1 class="title is-1 is-spaced">Recent Posts</h1>
                     <hr>
                     <div id="post-rows">
-                                
+
                     </div>
                     <div class="box">
                         <article class="media">
@@ -177,8 +177,7 @@
                                 <p>
                                     <strong>Harry Arnold</strong> <small>@haroldA</small> <small>2hr</small>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                </p>
+                                    I  know it's scary and people want to believe in conspiracy theories or myths that vaccines are bad. And worse, want to shame others for vaccinating. But we MUST put aside that nonsense and stand bravely together to we protect the weakest in our communities: the elderly. The pregnant. The newborns. 
                                 </div>
                                 <nav class="level is-mobile">
                                 <div class="level-left">
@@ -208,7 +207,7 @@
                                 <p>
                                     <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
                                     <br>
-                                    I have a bloody nose, do I have Ebola? Is it too late to be vaccinated? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                                    The thought of my kids having to suffer through a disease when there is a way to prevent them breaks my heart.
                                 </p>
                                 </div>
                                 <nav class="level is-mobile">
@@ -315,24 +314,16 @@
 
         <script>
           var source = $("#post-row").html();
-          var template = Handlebars.compile(source);  
-          var data = { 
+          var template = Handlebars.compile(source);
+          var data = {
               posts: [
                   {
-                      user: "FLU234",
-                      post:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      user: "Jonathan Brown",
+                      post:["This is an excellent tool for a father of three infants. It helps me keep track of all their vaccinations so their lives are never at risk."]
                   },
                   {
-                      user: "FLU234",
-                      post:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
-                  },
-                  {
-                      user: "FLU234",
-                      post:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
-                  },
-                  {
-                      user: "FLU234",
-                      post:["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
+                      user: "Kate Melendez",
+                      post:["My first born had chicken pox and missed school for a week. I vaccinated Johnny and he's as healthy as can be!"]
                   }
               ]
           };
