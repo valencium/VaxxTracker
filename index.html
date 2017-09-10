@@ -12,19 +12,23 @@
     </head>
 
     <body>
-        <div class="hero is-primary is-fullheight">
-            <div class="hero-body">
+        <div class="hero is-primary">
+            <div class="hero-head">
+                <br>
+                <br>
                 <div class="container has-text-centered">
                         <img src="assets/logo.png" alt="Bulma: a modern CSS framework based on Flexbox"> 
                         <h1 class="title is-1">VaxxTracker</h1>
                 </div>
+                <br>
+                <br>
             </div>
         </div>
 
         <section class="section">
             <div class="columns is-multiline">
                 <div class="column is-12">
-                    <h1 class="title is-1 is-spaced" id="users">Users</h1>
+                    <h1 class="title is-1 is-spaced" id="users">Animals</h1>
                     <hr>
                 </div>
                 <div class="column is-3">
@@ -160,17 +164,6 @@
                     </div>
                 </div>
 
-                <div class="column is-12">
-                    <br>
-                    <h1 class="title is-1 is-spaced">Phone #</h1>
-                    <div class="field">
-                        <div class="control">
-                            <input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your Phone Number">
-                        </div>
-                    </div>
-                    <a id="save-btn" class="button is-primary is-fullwidth">SAVE</a>
-                </div>
-
                 <!--FORUM/REDDIT-LIKE POST-->
                 <div class="column is-12">
                     <br>
@@ -246,6 +239,7 @@
                 <div class="column is-12">
                     <br>
                     <h1 class="title is-1 is-spaced">Frequently Asked Questions</h1>
+                    <hr>
                     <div class="tile is-ancestor">
                     <div class="tile is-4 is-vertical is-parent">
                         <div class="tile is-child box">
@@ -260,7 +254,7 @@
                     <div class="tile is-parent">
                         <div class="tile is-child box">
                         <p class="title">Why vaccinate?</p>
-                        <p>Herd immunity will not definitely protect anyone who is not vaccinated. There are low vaccination rates in some parts of the UK and in some communities. This means that if your child is not vaccinated, it is quite likely that many of the people they come into contact with will not be vaccinated either. So if one person gets an infectious disease, it can spread quickly through all the unvaccinated people in the group (this happened during the 2013 measles outbreak in Wales).
+                        <p>Herd immunity will not definitely protect anyone who is not vaccinated. There are low vaccination rates in some parts of the US and in some communities. This means that if your child is not vaccinated, it is quite likely that many of the people they come into contact with will not be vaccinated either. So if one person gets an infectious disease, it can spread quickly through all the unvaccinated people in the group (this happened during the 2013 measles outbreak in Wales).
                         </p>
                         <br>
                         <p>
@@ -281,7 +275,20 @@
                     </div>
                 </div>
             </div>
+
+        <div class="column is-12">
+                <br>
+                <h1 class="title is-1 is-spaced">Phone #</h1>
+                <div class="field">
+                    <div class="control">
+                        <input id="textfield" class="input is-primary is-large" type="text" placeholder="Enter Your Phone Number">
+                    </div>
+                </div>
+                <a id="save-btn" class="button is-primary is-fullwidth">SAVE</a>
+            </div>
+            <br>
         </section>
+
 
 
         <!--Handlebars template for posts TODO-->
