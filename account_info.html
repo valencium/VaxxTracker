@@ -13,7 +13,7 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title is-1 is-spaced">Hello Pablo</h1>
-                    <h3 class="subtitle is-3">Vaccinate the damn kids.</h3>
+                    <h3 class="subtitle is-3">Here are your upcoming vaccinations</h3>
                 </div>
             </div>
         </div>
@@ -82,20 +82,20 @@
             {{/each}}
           </tr>
           {{/vaccinations}}
-          
+
         </script>
         <script>
             var coin = 0;
             function inflate(modalId){
                 coin++;
                 if(coin > 1){
-                    document.getElementById("one").getElementsByClassName("modal-content")[0].getElementsByClassName("box")[0].innerHTML = "Polio (or poliomyelitis) is a disease caused by poliovirus. It can cause lifelong paralysis (can’t move parts of the body), and it can be deadly.";    
+                    document.getElementById("one").getElementsByClassName("modal-content")[0].getElementsByClassName("box")[0].innerHTML = "Polio (or poliomyelitis) is a disease caused by poliovirus. It can cause lifelong paralysis (can’t move parts of the body), and it can be deadly.";
                 }
 
                 console.log("modal was toggled");
                 var x = document.getElementById("one");
                 document.getElementById("one").classList += " is-active";
-            };   
+            };
         </script>
 
         <!--jQuery-->
